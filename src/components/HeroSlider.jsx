@@ -6,13 +6,16 @@ import { Link } from "react-router-dom";
 
 export default function HomeSlider() {
   return (
-    <div className="w-full relative z-0">
+    <div className="relative w-full h-[753px]  overflow-visible">
       <Swiper
         modules={[Navigation]}
         navigation
         loop={true}
-        className="w-full h-[753px] md:h-[716px]"
-        style={{ "--swiper-navigation-color": "#ffffff" }}
+        className="w-full h-full"
+        style={{
+          "--swiper-navigation-color": "#ffffff",
+          "--swiper-navigation-size": "32px",
+        }}
       >
         <SwiperSlide>
           <div className=" w-full h-full bg-[url(public/pruduct_slider.jpg)] bg-cover bg-[position:50%_center] text-white font-[Montserrat] flex flex-col items-center justify-center p-20 text-center gap-10 md:bg-center md:text-left md:items-start">

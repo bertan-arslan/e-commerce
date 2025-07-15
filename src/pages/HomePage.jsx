@@ -1,19 +1,15 @@
 import CategoryPick from "../components/CategoryPick";
-import HomeSlider from "../components/HomeSlider";
+import HeroSlider from "../components/HeroSlider";
+import FavProducts from "../components/FavProducts";
+import ProductCard from "../components/ProductCard";
 
 export default function Home() {
   return (
     <main>
-      <HomeSlider />
+      <HeroSlider />
       <CategoryPick />
-      {/*bestseller*/}
-      <section></section>
-      {/*slider*/}
-      <section></section>
-      {/*natural universe*/}
-      <section></section>
-      {/*featured posts*/}
-      <section></section>
+      <FavProducts />
+      <ProductCard />
     </main>
   );
 }
