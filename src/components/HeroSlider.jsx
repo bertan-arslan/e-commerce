@@ -6,20 +6,23 @@ import { Link } from "react-router-dom";
 
 export default function HomeSlider() {
   return (
-    <div className="w-full   ">
+    <div className="w-full relative z-0">
       <Swiper
         modules={[Navigation]}
         navigation
         loop={true}
-        className="w-full h-[753px]"
+        className="w-full h-[753px] md:h-[716px]"
         style={{ "--swiper-navigation-color": "#ffffff" }}
       >
         <SwiperSlide>
-          <div className=" w-full h-full bg-[url(public/pruduct_slider.jpg)] bg-cover bg-[position:50%_center] text-white font-[Montserrat] flex flex-col items-center justify-center p-20 text-center gap-10 lg:bg-center lg:text-left lg:items-start">
+          <div className=" w-full h-full bg-[url(public/pruduct_slider.jpg)] bg-cover bg-[position:50%_center] text-white font-[Montserrat] flex flex-col items-center justify-center p-20 text-center gap-10 md:bg-center md:text-left md:items-start">
             <h5 className="font-bold">SUMMER 2025</h5>
-            <h2 className="font-bold text-[40px] lg:text-[58px]">NEW COLLECTION</h2>
+            <h2 className="font-bold text-[40px] md:text-[58px]">
+              NEW COLLECTION
+            </h2>
             <h4 className="text-xl">
-              We know how large objects will act, <br className="hidden lg:flex"/> but things on a small scale.
+              We know how large objects will act,{" "}
+              <br className="hidden md:flex" /> but things on a small scale.
             </h4>
             <Link
               to="/maintenance"
@@ -32,7 +35,7 @@ export default function HomeSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className=" w-full h-full bg-[url(public/pruduct_slider.jpg)] bg-cover bg-[position:50%_center]  text-white font-[Montserrat] flex flex-col items-center justify-center p-20 text-center  gap-10 lg:bg-center lg:text-left lg:items-start">
+          <div className=" w-full h-full bg-[url(public/pruduct_slider.jpg)] bg-cover bg-[position:50%_center]  text-white font-[Montserrat] flex flex-col items-center justify-center p-20 text-center  gap-10 md:bg-center md:text-left md:items-start">
             <h5 className="font-bold">SUMMER 2025</h5>
             <h2 className="font-bold text-[40px]">NEW COLLECTION</h2>
             <h4 className="text-xl">

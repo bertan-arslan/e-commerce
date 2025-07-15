@@ -23,8 +23,8 @@ export default function Header() {
   const location = useLocation();
 
   return (
-    <header>
-      <div className="hidden lg:flex flex-row gap-10 items-center justify-between lg:bg-[#252B42] px-10 py-5 text-white text-sm font-bold font-[Montserrat]">
+    <header className="z-50 relative">
+      <div className="hidden md:flex flex-row gap-10 items-center justify-between md:bg-[#252B42] px-10 py-5 text-white text-sm font-bold font-[Montserrat]">
         <div className="flex gap-1 items-center justify-center ">
           <Phone className="h-4" />
           <span>(225) 555-0118</span>
@@ -74,7 +74,7 @@ export default function Header() {
         >
           Bandage
         </Link>
-        <div className="hidden lg:flex  justify-between items-center gap-5  font-[Montserrat] text-xsm text-[#737373] ">
+        <div className="hidden md:flex  justify-between items-center gap-5  font-[Montserrat] text-xsm text-[#737373] ">
           <Link
             to="/"
             onClick={() => setIsOpen(false)}
@@ -85,14 +85,17 @@ export default function Header() {
             Home
           </Link>
           <div className="relative flex">
-            <button
+            <Link
+              to="/maintenance"
+              //to="/shop"
               onClick={toggleMenu}
               className={`${
-                isOpen ? "font-normal" : "font-bold"
-              } text-[#737373] cursor-pointer`}
+                location.pathname === "/shop" ? "font-normal" : "font-bold"
+              } `}
             >
               Shop
-            </button>
+            </Link>
+
             {isOpen ? (
               <ChevronUp onClick={toggleMenu} className="cursor-pointer" />
             ) : (
@@ -101,7 +104,13 @@ export default function Header() {
             {isOpen && (
               <div className="absolute flex top-full mt-2  shadow-md gap-30 p-5 font-bold text-sm w-96 bg-white">
                 <div className="flex flex-col justify-between gap-10 w-20">
-                  <p className="text-[#252B42]">Women</p>
+                  <Link
+                    className="text-[#252B42]"
+                    //to="/shop/women"
+                    to="/maintenance"
+                  >
+                    Women
+                  </Link>
                   <div className="flex flex-col gap-5">
                     <Link
                       //to="/shop/women/bags"
@@ -146,7 +155,13 @@ export default function Header() {
                   </div>
                 </div>
                 <div className="flex flex-col justify-between gap-10 w-20">
-                  <p className="text-[#252B42]">Men</p>
+                  <Link
+                    className="text-[#252B42]"
+                    //to="/shop/men"
+                    to="/maintenance"
+                  >
+                    Men
+                  </Link>
                   <div className="flex flex-col gap-5">
                     <Link
                       //to="/shop/men/bags"
@@ -235,14 +250,14 @@ export default function Header() {
             Pages
           </Link>
         </div>
-        <div className="flex gap-5 lg:gap-7 text-[#252B42] lg:text-[#23A6F0]">
+        <div className="flex gap-5 md:gap-7 text-[#252B42] md:text-[#23A6F0]">
           <Link
             //to="/profile"
             to="/maintenance"
             className="flex gap-1 content-center items-center "
           >
             <CircleUserRound />
-            <p className="hidden lg:flex text-[#23A6F0] font-bold">
+            <p className="hidden md:flex text-[#23A6F0] font-bold">
               Login/Register
             </p>
           </Link>
@@ -255,12 +270,12 @@ export default function Header() {
           >
             <ShoppingCart />
             {/* beğeni sayısı çekilecek */}
-            <p className="hidden lg:flex">1</p>
+            <p className="hidden md:flex">1</p>
           </Link>
-          <Menu onClick={toggleMenu} className="lg:hidden" />
+          <Menu onClick={toggleMenu} className="md:hidden" />
           <Link
             //to="/profile/likes"
-            className="hidden lg:flex gap-1 content-center items-center"
+            className="hidden md:flex gap-1 content-center items-center"
           >
             <Heart />
             {/* beğeni sayısı çekilecek */}
@@ -269,7 +284,7 @@ export default function Header() {
         </div>
       </div>
       {isOpen && (
-        <div className="flex flex-col justify-between items-center gap-10 px-10 py-20 font-[Montserrat] text-3xl text-[#737373] lg:hidden">
+        <div className="flex flex-col justify-between items-center gap-10 px-10 py-20 font-[Montserrat] text-3xl text-[#737373] md:hidden">
           <Link
             to="/"
             className={`${

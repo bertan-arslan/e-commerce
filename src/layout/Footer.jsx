@@ -102,7 +102,8 @@ export default function Footer() {
       </div>
       <p className="pt-30 flex items-center justify-center text-sm font-bold text-center">
         Made With Love By <br className="lg:hidden" />
-        Figmaland All Right Reserved
+        Bertan ARSLAN <br className="lg:hidden" />
+        For Educational Purposes
       </p>
     </footer>
   );
