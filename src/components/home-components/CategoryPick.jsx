@@ -11,7 +11,7 @@ export default function CategoryPick() {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
-        <div className="w-[325px] h-[500px] bg-[url(public/category-men.jpg)] bg-cover bg-center flex flex-col justify-end md:w-[510px]">
+        <div className="w-[325px] h-[500px] bg-[url(/category-men.jpg)] bg-cover bg-center flex flex-col justify-end md:w-[510px]">
           <Link
             //to="/shop/men"
             to="/maintenance"
@@ -21,7 +21,7 @@ export default function CategoryPick() {
           </Link>
         </div>
         <div className="flex flex-col gap-6 md:flex-row">
-          <div className="w-[325px] h-[500px] bg-[url(public/category-women.jpg)] bg-cover bg-center flex flex-col justify-end md:w-[240px]">
+          <div className="w-[325px] h-[500px] bg-[url(/category-women.jpg)] bg-cover bg-center flex flex-col justify-end md:w-[240px]">
             <Link
               //to="/shop/women"
               to="/maintenance"
@@ -31,7 +31,7 @@ export default function CategoryPick() {
             </Link>
           </div>
           <div className="flex flex-col gap-3">
-            <div className="w-[325px] h-[242px] bg-[url(public/category-acc.jpg)] bg-cover bg-center flex flex-col justify-end md:w-[240px]">
+            <div className="w-[325px] h-[242px] bg-[url(/category-acc.jpg)] bg-cover bg-center flex flex-col justify-end md:w-[240px]">
               <Link
                 //to="/shop/accessories"
                 to="/maintenance"
@@ -40,7 +40,7 @@ export default function CategoryPick() {
                 ACCESSORIES
               </Link>
             </div>
-            <div className="w-[325px] h-[242px] bg-[url(public/category-kids.jpg)] bg-cover bg-center flex flex-col justify-end md:w-[240px]">
+            <div className="w-[325px] h-[242px] bg-[url(/category-kids.jpg)] bg-cover bg-center flex flex-col justify-end md:w-[240px]">
               <Link
                 //to="/shop/kids"
                 to="/maintenance"

@@ -1,16 +1,16 @@
-import ProductFavList from "../data/ProductFavList";
+import productFavList from "../../data/ProductFavList";
 
-export default function ProductCard() {
+export default function CardProduct() {
   return (
-    <section>
-      {ProductFavList.map((p, i) => (
+    <div className="md:flex md:flex-wrap md:items-center md:justify-center md:gap-5 md:w-[1124px] md:m-auto">
+      {productFavList.map((p, i) => (
         <div
           key={i}
-          className="flex flex-col items-center justify-center text-center gap-3 my-10 font-[Montserrat]"
+          className="flex flex-col items-center justify-center text-center gap-3 font-[Montserrat] md:w-[240px] md:h-[615px]"
         >
           <img
             src={p.imgUrl}
-            className="w-[348px] h-[427px] my-3 object-fill"
+            className="w-[240px] h-[427px] my-3 object-cover"
             alt={p.title}
           />
           <h5 className="text-[#252B42] font-bold">{p.title}</h5>
@@ -30,6 +30,6 @@ export default function ProductCard() {
           </div>
         </div>
       ))}
-    </section>
+    </div>
   );
 }

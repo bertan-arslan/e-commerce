@@ -1,7 +1,9 @@
-import CategoryPick from "../components/CategoryPick";
-import HeroSlider from "../components/HeroSlider";
-import FavProducts from "../components/FavProducts";
-import ProductCard from "../components/ProductCard";
+import CategoryPick from "../components/home-components/CategoryPick";
+import HeroSlider from "../components/home-components/HeroSlider";
+import FavProducts from "../components/home-components/FavProducts";
+import BottomSlider from "../components/home-components/BottomSlider";
+import C2A from "../components/home-components/C2A";
+import FeaturedPosts from "../components/home-components/FeaturedPosts";
 
 export default function Home() {
   return (
@@ -9,7 +11,9 @@ export default function Home() {
       <HeroSlider />
       <CategoryPick />
       <FavProducts />
-      <ProductCard />
+      <BottomSlider />
+      <C2A />
+      <FeaturedPosts />
     </main>
   );
 }

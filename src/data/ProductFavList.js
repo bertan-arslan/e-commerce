@@ -1,7 +1,7 @@
-const ProductFavList = [
+const productFavList = [
   {
     id: 1,
-    imgUrl: "public/ProductCategoryList/product-fav-1.jpg",
+    imgUrl: "ProductCategoryList/product-fav-1.jpg",
     title: "Graphic Design",
     subtitle: "English Department",
     price: 16.48,
@@ -10,7 +10,7 @@ const ProductFavList = [
   },
   {
     id: 2,
-    imgUrl: "public/ProductCategoryList/product-fav-2.jpg",
+    imgUrl: "ProductCategoryList/product-fav-2.jpg",
     title: "Graphic Design",
     subtitle: "English Department",
     price: 16.48,
@@ -19,7 +19,7 @@ const ProductFavList = [
   },
   {
     id: 3,
-    imgUrl: "public/ProductCategoryList/product-fav-3.jpg",
+    imgUrl: "ProductCategoryList/product-fav-3.jpg",
     title: "Graphic Design",
     subtitle: "English Department",
     price: 16.48,
@@ -28,7 +28,7 @@ const ProductFavList = [
   },
   {
     id: 4,
-    imgUrl: "public/ProductCategoryList/product-fav-4.jpg",
+    imgUrl: "ProductCategoryList/product-fav-4.jpg",
     title: "Graphic Design",
     subtitle: "English Department",
     price: 16.48,
@@ -37,7 +37,7 @@ const ProductFavList = [
   },
   {
     id: 5,
-    imgUrl: "public/ProductCategoryList/product-fav-5.jpg",
+    imgUrl: "ProductCategoryList/product-fav-5.jpg",
     title: "Graphic Design",
     subtitle: "English Department",
     price: 16.48,
@@ -47,7 +47,7 @@ const ProductFavList = [
 
   {
     id: 6,
-    imgUrl: "public/ProductCategoryList/product-fav-6.jpg",
+    imgUrl: "ProductCategoryList/product-fav-6.jpg",
     title: "Graphic Design",
     subtitle: "English Department",
     price: 16.48,
@@ -56,7 +56,7 @@ const ProductFavList = [
   },
   {
     id: 7,
-    imgUrl: "public/ProductCategoryList/product-fav-7.jpg",
+    imgUrl: "ProductCategoryList/product-fav-7.jpg",
     title: "Graphic Design",
     subtitle: "English Department",
     price: 16.48,
@@ -65,7 +65,7 @@ const ProductFavList = [
   },
   {
     id: 8,
-    imgUrl: "public/ProductCategoryList/product-fav-8.jpg",
+    imgUrl: "ProductCategoryList/product-fav-8.jpg",
     title: "Graphic Design",
     subtitle: "English Department",
     price: 16.48,
@@ -74,4 +74,4 @@ const ProductFavList = [
   },
 ];
 
-export default ProductFavList;
+export default productFavList;
