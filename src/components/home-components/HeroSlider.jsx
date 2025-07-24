@@ -15,11 +15,11 @@ export default function HeroSlider() {
         style={{
           "--swiper-navigation-color": "#ffffff",
           "--swiper-navigation-size": "32px",
-          "--swiper-navigation-sides-offset": "15px",
+          "--swiper-navigation-sides-offset": "30px",
         }}
       >
         <SwiperSlide>
-          <div className=" w-full h-full bg-[url('public/product_slider.jpg')] bg-cover bg-[position:50%_center] text-white font-[Montserrat] flex flex-col items-center justify-center p-20 text-center gap-10 md:bg-center md:text-left md:items-start md:pl-50">
+          <div className=" w-full h-full bg-[url('/product_slider.jpg')] bg-cover bg-[position:50%_center] text-white font-[Montserrat] flex flex-col items-center justify-center p-20 text-center gap-10 md:bg-center md:text-left md:items-start">
             <h5 className="font-bold">SUMMER 2025</h5>
             <h2 className="font-bold text-[40px] md:text-[58px]">
               NEW COLLECTION
@@ -32,14 +32,14 @@ export default function HeroSlider() {
               to="/maintenance"
               //to="/shop"
             >
-              <button className="h-[62px] w-[221px] bg-[#2DC071] font-bold text-2xl rounded-md cursor-pointer transition-colors duration-300 hover:text-[#2DC071] hover:bg-white hover:border-[#2DC071]">
+              <button className="h-[62px] w-[221px] bg-[#2DC071] font-bold text-2xl rounded-md">
                 SHOP NOW
               </button>
             </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className=" w-full h-full bg-[url('public/product_slider.jpg')]  bg-cover bg-[position:50%_center] text-white font-[Montserrat] flex flex-col items-center justify-center p-20 text-center gap-10 md:bg-center md:text-left md:items-start md:pl-50">
+          <div className=" w-full h-full bg-[url('/product_slider.jpg')] bg-cover bg-[position:50%_center] text-white font-[Montserrat] flex flex-col items-center justify-center p-20 text-center gap-10 md:bg-center md:text-left md:items-start">
             <h5 className="font-bold">SUMMER 2025</h5>
             <h2 className="font-bold text-[40px] md:text-[58px]">
               NEW COLLECTION
@@ -52,7 +52,7 @@ export default function HeroSlider() {
               to="/maintenance"
               //to="/shop"
             >
-              <button className="h-[62px] w-[221px] bg-[#2DC071] font-bold text-2xl rounded-md cursor-pointer transition-colors duration-300 hover:text-[#2DC071] hover:bg-white hover:border-[#2DC071]">
+              <button className="h-[62px] w-[221px] bg-[#2DC071] font-bold text-2xl rounded-md">
                 SHOP NOW
               </button>
             </Link>
