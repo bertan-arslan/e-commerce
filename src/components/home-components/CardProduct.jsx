@@ -1,35 +1,37 @@
-import productFavList from "../../data/ProductFavList";
+import { Link } from "react-router-dom";
+import { useProducts } from "../../hooks/UseProduct";
 
 export default function CardProduct() {
+  const { data: products, isLoading, error } = useProducts();
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Failed to load products.</p>;
+
   return (
-    <div className="md:flex md:flex-wrap md:items-center md:justify-center md:gap-5 md:w-[1124px] md:m-auto">
-      {productFavList.map((p, i) => (
-        <div
-          key={i}
-          className="flex flex-col items-center justify-center text-center gap-3 font-[Montserrat] md:w-[240px] md:h-[615px]"
-        >
-          <img
-            src={p.imgUrl}
-            className="w-[240px] h-[427px] my-3 object-cover"
-            alt={p.title}
-          />
-          <h5 className="text-[#252B42] font-bold">{p.title}</h5>
-          <p className="text-[#737373] font-bold text-sm">{p.subtitle}</p>
-          <p className="text-[#BDBDBD] font-bold text-sm">
-            ${p.price}
-            <span className="text-[#23856D]"> ${p.discountPrice}</span>
-          </p>
-          <div className="flex gap-2">
-            {p.colorOptions.map((c, index) => (
-              <div
-                key={index}
-                className="h-4 w-4 rounded-lg"
-                style={{ backgroundColor: c }}
-              ></div>
-            ))}
-          </div>
-        </div>
-      ))}
+    <div className="my-10 mx-auto flex flex-wrap justify-center gap-5 w-full md:w-[1124px]">
+      {products
+        .filter((product) => product.sell_count > 700)
+        .map((p) => (
+          <Link
+            to="/shop"
+            key={p.id}
+            className="flex flex-col items-center justify-start text-center gap-3 font-[Montserrat] w-[240px] h-[520px] overflow-hidden"
+          >
+            <img
+              src={p.images[0].url}
+              className="w-[240px] h-[320px] object-cover object-center"
+              alt={p.name}
+            />
+            <h5 className="text-[#252B42] font-bold">{p.name}</h5>
+            <p className="text-[#737373] font-bold text-sm line-clamp-2">
+              {p.description}
+            </p>
+            <p className="text-[#BDBDBD] font-bold text-sm">
+              ${p.price}
+              <span className="text-[#23856D]"> ${p.price - 10}</span>
+            </p>
+          </Link>
+        ))}
     </div>
   );
 }

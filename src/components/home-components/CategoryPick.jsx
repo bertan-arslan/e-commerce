@@ -13,8 +13,7 @@ export default function CategoryPick() {
       <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
         <div className="w-[325px] h-[500px] bg-[url('/category-men.jpg')] bg-cover bg-center flex flex-col justify-end md:w-[510px]">
           <Link
-            //to="/shop/men"
-            to="/maintenance"
+            to="/shop"
             className="m-7 w-[170px] h-12 bg-white flex items-center justify-center font-bold text-[#252B42]"
           >
             MEN
@@ -23,8 +22,7 @@ export default function CategoryPick() {
         <div className="flex flex-col gap-6 md:flex-row">
           <div className="w-[325px] h-[500px] bg-[url('/category-women.jpg')] bg-cover bg-center flex flex-col justify-end md:w-[240px]">
             <Link
-              //to="/shop/women"
-              to="/maintenance"
+              to="/shop"
               className="m-7 w-[170px] h-12 bg-white flex items-center justify-center font-bold text-[#252B42]"
             >
               WOMEN
@@ -33,8 +31,7 @@ export default function CategoryPick() {
           <div className="flex flex-col gap-3">
             <div className="w-[325px] h-[242px] bg-[url('/category-acc.jpg')] bg-cover bg-center flex flex-col justify-end md:w-[240px]">
               <Link
-                //to="/shop/accessories"
-                to="/maintenance"
+                to="/shop"
                 className="m-7 w-[170px] h-12 bg-white flex items-center justify-center font-bold text-[#252B42]"
               >
                 ACCESSORIES
@@ -42,8 +39,7 @@ export default function CategoryPick() {
             </div>
             <div className="w-[325px] h-[242px] bg-[url('/category-kids.jpg')] bg-cover bg-center flex flex-col justify-end md:w-[240px]">
               <Link
-                //to="/shop/kids"
-                to="/maintenance"
+                to="/shop"
                 className="m-7 w-[170px] h-12 bg-white flex items-center justify-center font-bold text-[#252B42]"
               >
                 KIDS

@@ -30,8 +30,8 @@ export default function HeroSlider() {
               <br className="hidden md:flex" /> but things on a small scale.
             </h4>
             <Link
-              to="/maintenance"
-              //to="/shop"
+              
+              to="/shop"
             >
               <button className="h-[62px] w-[221px] bg-[#2DC071] font-bold text-2xl rounded-md">
                 SHOP NOW
@@ -50,8 +50,8 @@ export default function HeroSlider() {
               <br className="hidden md:flex" /> but things on a small scale.
             </h4>
             <Link
-              to="/maintenance"
-              //to="/shop"
+              
+              to="/shop"
             >
               <button className="h-[62px] w-[221px] bg-[#2DC071] font-bold text-2xl rounded-md">
                 SHOP NOW

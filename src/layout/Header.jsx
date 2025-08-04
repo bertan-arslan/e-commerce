@@ -104,49 +104,40 @@ export default function Header() {
             {isOpen && (
               <div className="absolute flex top-full mt-2  shadow-md gap-30 p-5 font-bold text-sm w-96 bg-white">
                 <div className="flex flex-col justify-between gap-10 w-20">
-                  <Link
-                    className="text-[#252B42]"
-                    //to="/shop/women"
-                    to="/maintenance"
-                  >
+                  <Link className="text-[#252B42]" to="/shop">
                     Women
                   </Link>
                   <div className="flex flex-col gap-5">
                     <Link
-                      //to="/shop/women/bags"
-                      to="/maintenance"
+                      to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Bags
                     </Link>
                     <Link
-                      //to="/shop/women/belts"
-                      to="/maintenance"
+                      to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Belts
                     </Link>
                     <Link
-                      //to="/shop/women/cosmetics"
-                      to="/maintenance"
+                      to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Cosmetics
                     </Link>
                     <Link
-                      //to="/shop/women/shoes"
-                      to="/maintenance"
+                      to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Shoes
                     </Link>
                     <Link
-                      //to="/shop/women/hats"
-                      to="/maintenance"
+                      to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
@@ -155,49 +146,40 @@ export default function Header() {
                   </div>
                 </div>
                 <div className="flex flex-col justify-between gap-10 w-20">
-                  <Link
-                    className="text-[#252B42]"
-                    //to="/shop/men"
-                    to="/maintenance"
-                  >
+                  <Link className="text-[#252B42]" to="/shop">
                     Men
                   </Link>
                   <div className="flex flex-col gap-5">
                     <Link
-                      //to="/shop/men/bags"
-                      to="/maintenance"
+                      to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Bags
                     </Link>
                     <Link
-                      //to="/shop/men/belts"
-                      to="/maintenance"
+                      to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Belts
                     </Link>
                     <Link
-                      //to="/shop/men/cosmetics"
-                      to="/maintenance"
+                      to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Cosmetics
                     </Link>
                     <Link
-                      //to="/shop/men/shoes"
-                      to="/maintenance"
+                      to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Shoes
                     </Link>
                     <Link
-                      //to="/shop/men/hats"
-                      to="/maintenance"
+                      to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
