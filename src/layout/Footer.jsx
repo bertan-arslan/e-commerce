@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="text-white font-[Montserrat] bg-[#23A6F0] px-20 pt-20 pb-5 ">
-      <div className="px-5 flex flex-col  gap-10 lg:flex-row lg:justify-between md:w-[1050px] md:m-auto">
+      <div className="px-5 flex flex-col  gap-10 lg:flex-row lg:justify-between md:w-full md:m-auto">
         <div className="flex flex-col gap-5">
           <h3 className="text-2xl font-bold">Get In Touch</h3>
           <p className="text-sm text-[#8EC2F2]">

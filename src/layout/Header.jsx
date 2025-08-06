@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header className="z-50 relative">
-      <div className="hidden md:flex flex-row gap-10 items-center justify-between md:bg-[#252B42] px-10 py-5 text-white text-sm font-bold font-[Montserrat]">
+      <div className="hidden md:flex flex-row flex-wrap gap-10 items-center justify-between md:bg-[#252B42] px-10 py-5 text-white text-sm font-bold font-[Montserrat]">
         <div className="flex gap-1 items-center justify-center ">
           <Phone className="h-4" />
           <span>(225) 555-0118</span>
@@ -67,7 +67,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="flex justify-between items-center px-10 py-5 shadow-md">
+      <div className="flex flex-wrap justify-between items-center gap-5 px-10 py-5 shadow-md">
         <Link
           className="font-[Montserrat] text-2xl font-bold text-[#252B42]"
           to="/"
@@ -86,8 +86,7 @@ export default function Header() {
           </Link>
           <div className="relative flex">
             <Link
-              to="/maintenance"
-              //to="/shop"
+              to="/shop"
               onClick={toggleMenu}
               className={`${
                 location.pathname === "/shop" ? "font-normal" : "font-bold"
@@ -104,40 +103,43 @@ export default function Header() {
             {isOpen && (
               <div className="absolute flex top-full mt-2  shadow-md gap-30 p-5 font-bold text-sm w-96 bg-white">
                 <div className="flex flex-col justify-between gap-10 w-20">
-                  <Link className="text-[#252B42]" to="/shop">
+                  <Link
+                    className="text-[#252B42]"
+                    //to="/shop"
+                  >
                     Women
                   </Link>
                   <div className="flex flex-col gap-5">
                     <Link
-                      to="/shop"
+                      //to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Bags
                     </Link>
                     <Link
-                      to="/shop"
+                      // to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Belts
                     </Link>
                     <Link
-                      to="/shop"
+                      //to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Cosmetics
                     </Link>
                     <Link
-                      to="/shop"
+                      //to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Shoes
                     </Link>
                     <Link
-                      to="/shop"
+                      //to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
@@ -146,40 +148,43 @@ export default function Header() {
                   </div>
                 </div>
                 <div className="flex flex-col justify-between gap-10 w-20">
-                  <Link className="text-[#252B42]" to="/shop">
+                  <Link
+                    className="text-[#252B42]"
+                    //to="/shop"
+                  >
                     Men
                   </Link>
                   <div className="flex flex-col gap-5">
                     <Link
-                      to="/shop"
+                      //to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Bags
                     </Link>
                     <Link
-                      to="/shop"
+                      //to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Belts
                     </Link>
                     <Link
-                      to="/shop"
+                      // to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Cosmetics
                     </Link>
                     <Link
-                      to="/shop"
+                      //to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
                       Shoes
                     </Link>
                     <Link
-                      to="/shop"
+                      //to="/shop"
                       onClick={toggleMenu}
                       className="hover:font-normal"
                     >
@@ -212,8 +217,7 @@ export default function Header() {
             Blog
           </Link>
           <Link
-            //to="/contact"
-            to="/maintenance"
+            to="/contact"
             onClick={() => setIsOpen(false)}
             className={`${
               location.pathname === "/contact" ? "font-normal" : "font-bold"
@@ -222,14 +226,14 @@ export default function Header() {
             Contact
           </Link>
           <Link
-            //to="/pages"
+            //to="/pricing"
             to="/maintenance"
             onClick={() => setIsOpen(false)}
             className={`${
-              location.pathname === "/pages" ? "font-normal" : "font-bold"
+              location.pathname === "/pricing" ? "font-normal" : "font-bold"
             }`}
           >
-            Pages
+            Pricing
           </Link>
         </div>
         <div className="flex gap-5 md:gap-7 text-[#252B42] md:text-[#23A6F0]">
@@ -276,31 +280,52 @@ export default function Header() {
             Home
           </Link>
           <Link
-            //to="/product"
-            to="/maintenance"
+            to="/shop"
             className={`${
-              location.pathname === "/product" ? "font-normal" : "font-bold"
+              location.pathname === "/shop" ? "font-normal" : "font-bold"
             }`}
           >
             Product
           </Link>
+
           <Link
-            //to="/pricing"
+            //to="/about"
             to="/maintenance"
+            onClick={() => setIsOpen(false)}
             className={`${
-              location.pathname === "/pricing" ? "font-normal" : "font-bold"
+              location.pathname === "/about" ? "font-normal" : "font-bold"
             }`}
           >
-            Pricing
+            About
           </Link>
           <Link
-            //to="/contact"
+            //to="/blog"
             to="/maintenance"
+            onClick={() => setIsOpen(false)}
+            className={`${
+              location.pathname === "/blog" ? "font-normal" : "font-bold"
+            }`}
+          >
+            Blog
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => setIsOpen(false)}
             className={`${
               location.pathname === "/contact" ? "font-normal" : "font-bold"
             }`}
           >
             Contact
+          </Link>
+          <Link
+            //to="/pricing"
+            to="/maintenance"
+            onClick={() => setIsOpen(false)}
+            className={`${
+              location.pathname === "/pricing" ? "font-normal" : "font-bold"
+            }`}
+          >
+            Pricing
           </Link>
         </div>
       )}
