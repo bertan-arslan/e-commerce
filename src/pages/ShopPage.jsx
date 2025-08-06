@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useProductsPagination } from "../hooks/useProductsPagination";
-import ProductCard from "../components/shop-page/productCard";
+import ProductCard from "../components/shop-page/ProductCard";
 import Pagination from "../components/shop-page/Pagination";
 
 
