@@ -1,5 +1,7 @@
+import SupportSection from "../components/contact/SupportSection";
+
 export default function ContactPage(){
     return <main>
-        CONTACT BURAYA
+        <SupportSection />
     </main>
 }
