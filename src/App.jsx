@@ -5,11 +5,13 @@ import { queryClient } from "./lib/queryClient";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import PageContent from "./layout/PageContent";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
+        <ScrollToTop />
         <Header />
         <PageContent />
         <Footer />

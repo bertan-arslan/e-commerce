@@ -4,6 +4,8 @@ import Maintenance from "../pages/Maintenance";
 import ShopPage from "../pages/ShopPage";
 import ProductDetail from "../pages/ProductDetail";
 import ContactPage from "../pages/ContactPage";
+import AboutPage from "../pages/AboutPage";
+import PricingPage from "../pages/PricingPage";
 
 export default function PageContent() {
   return (
@@ -11,14 +13,20 @@ export default function PageContent() {
       <Route exact path="/">
         <HomePage />
       </Route>
-      <Route  path="/shop">
+      <Route path="/shop">
         <ShopPage />
       </Route>
-      <Route  path="/product">
+      <Route path="/product">
         <ProductDetail />
       </Route>
-      <Route  path="/contact">
+      <Route path="/contact">
         <ContactPage />
+      </Route>
+      <Route path="/about">
+        <AboutPage />
+      </Route>
+      <Route path="/pricing">
+        <PricingPage />
       </Route>
       <Route path="/maintenance">
         <Maintenance />

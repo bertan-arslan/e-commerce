@@ -1,9 +1,9 @@
 import { ChevronRight, Clock2, MessageSquareText } from "lucide-react";
-import posts from "../../data/Posts";
+import posts from "../../data/posts";
 
 export default function FeaturedPostCard() {
   return (
-    <div className="mx-auto mt-15 flex flex-col md:flex-row md:w-[1050px]">
+    <div className="mx-auto mt-15 flex flex-col md:flex-row md:max-w-[1050px]">
       {posts.map((p, i) => (
         <div
           key={i}

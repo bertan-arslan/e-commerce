@@ -2,7 +2,7 @@ import { Settings } from "lucide-react";
 
 export default function Maintenance() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen text-center p-6">
+    <main className="flex flex-col items-center justify-center h-screen text-center p-6">
       <Settings
         className="w-20 h-20 text-gray-400 duration-1000 animate-spin mb-6 "
         style={{ animationDuration: "2s" }}
@@ -13,6 +13,6 @@ export default function Maintenance() {
       <p className="text-gray-600 text-lg">
         We’re working on it. Please check back later.
       </p>
-    </div>
+    </main>
   );
 }

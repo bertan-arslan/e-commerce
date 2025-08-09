@@ -1,15 +1,14 @@
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="text-white font-[Montserrat] bg-[#23A6F0] px-20 pt-20 pb-5 ">
-      <div className="px-5 flex flex-col  gap-10 lg:flex-row lg:justify-between md:w-full md:m-auto">
+    <footer className="text-white font-[Montserrat] bg-[#252B42] px-20 pt-20 pb-5 ">
+      <div className="px-5 flex flex-col  gap-10 md:flex-row md:justify-around md:w-full md:m-auto">
         <div className="flex flex-col gap-5">
           <h3 className="text-2xl font-bold">Get In Touch</h3>
-          <p className="text-sm text-[#8EC2F2]">
-            the quick fox jumps over the lazy dog
-          </p>
+          <p className="text-sm">the quick fox jumps over the lazy dog</p>
           <nav className="flex gap-5">
             <a
               href="https://www.instagram.com/"
@@ -36,19 +35,14 @@ export default function Footer() {
             </a>
 
             <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="text-xl" />
+              <FaXTwitter className="text-xl" />
             </a>
           </nav>
         </div>
         <div className="flex flex-col gap-5">
           <h3 className="text-2xl font-bold">Company info</h3>
-          <nav className="text-sm text-[#8EC2F2] flex flex-col gap-3">
-            <Link
-              to="/maintenance"
-              //to="/about"
-            >
-              About us
-            </Link>
+          <nav className="text-sm  flex flex-col gap-3">
+            <Link to="/about">About us</Link>
             <Link
               to="/maintenance"
               //to="/carrier"
@@ -71,7 +65,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-5">
           <h3 className="text-2xl font-bold">Features</h3>
-          <nav className="text-sm text-[#8EC2F2] flex flex-col gap-3">
+          <nav className="text-sm flex flex-col gap-3">
             <Link to="/">About us</Link>
             <Link
               to="/maintenance"
@@ -101,8 +95,8 @@ export default function Footer() {
         </div>
       </div>
       <p className="pt-30 flex items-center justify-center text-sm font-bold text-center">
-        Made With Love By <br className="lg:hidden" />
-        Bertan ARSLAN <br className="lg:hidden" />
+        Made With Love By <br className="md:hidden" />
+        Bertan ARSLAN <br className="md:hidden" />
         For Educational Purposes
       </p>
     </footer>

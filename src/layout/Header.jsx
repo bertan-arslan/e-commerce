@@ -9,9 +9,11 @@ import {
   Search,
   ShoppingCart,
 } from "lucide-react";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,7 +64,7 @@ export default function Header() {
           </a>
 
           <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="text-xl" />
+            <FaXTwitter className="text-xl" />
           </a>
         </div>
       </div>
@@ -197,8 +199,8 @@ export default function Header() {
           </div>
 
           <Link
-            //to="/about"
-            to="/maintenance"
+            to="/about"
+            
             onClick={() => setIsOpen(false)}
             className={`${
               location.pathname === "/about" ? "font-normal" : "font-bold"
@@ -206,16 +208,7 @@ export default function Header() {
           >
             About
           </Link>
-          <Link
-            //to="/blog"
-            to="/maintenance"
-            onClick={() => setIsOpen(false)}
-            className={`${
-              location.pathname === "/blog" ? "font-normal" : "font-bold"
-            }`}
-          >
-            Blog
-          </Link>
+          
           <Link
             to="/contact"
             onClick={() => setIsOpen(false)}
@@ -226,8 +219,8 @@ export default function Header() {
             Contact
           </Link>
           <Link
-            //to="/pricing"
-            to="/maintenance"
+            to="/pricing"
+           
             onClick={() => setIsOpen(false)}
             className={`${
               location.pathname === "/pricing" ? "font-normal" : "font-bold"
@@ -247,7 +240,7 @@ export default function Header() {
               Login/Register
             </p>
           </Link>
-          {/* search kısmı çözülecek. Tıklanınca ne olacağına bakılacak */}
+          {/* search */}
           <Search />
           <Link
             //to="/profile/cart"
@@ -255,7 +248,7 @@ export default function Header() {
             className="flex gap-1 content-center items-center"
           >
             <ShoppingCart />
-            {/* beğeni sayısı çekilecek */}
+            {/* cart */}
             <p className="hidden md:flex">1</p>
           </Link>
           <Menu onClick={toggleMenu} className="md:hidden" />
@@ -264,7 +257,7 @@ export default function Header() {
             className="hidden md:flex gap-1 content-center items-center"
           >
             <Heart />
-            {/* beğeni sayısı çekilecek */}
+            {/* likes */}
             <p>1</p>
           </Link>
         </div>
@@ -289,8 +282,8 @@ export default function Header() {
           </Link>
 
           <Link
-            //to="/about"
-            to="/maintenance"
+            to="/about"
+            
             onClick={() => setIsOpen(false)}
             className={`${
               location.pathname === "/about" ? "font-normal" : "font-bold"
@@ -298,16 +291,7 @@ export default function Header() {
           >
             About
           </Link>
-          <Link
-            //to="/blog"
-            to="/maintenance"
-            onClick={() => setIsOpen(false)}
-            className={`${
-              location.pathname === "/blog" ? "font-normal" : "font-bold"
-            }`}
-          >
-            Blog
-          </Link>
+          
           <Link
             to="/contact"
             onClick={() => setIsOpen(false)}
@@ -318,8 +302,8 @@ export default function Header() {
             Contact
           </Link>
           <Link
-            //to="/pricing"
-            to="/maintenance"
+            to="/pricing"
+           
             onClick={() => setIsOpen(false)}
             className={`${
               location.pathname === "/pricing" ? "font-normal" : "font-bold"

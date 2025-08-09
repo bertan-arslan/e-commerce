@@ -1,3 +1,4 @@
+import Brands from "../components/Brands";
 import FavProducts from "../components/home/FavProducts"
 import ProductFooter from "../components/product-detail/ProductFooter";
 import ProductInfo from "../components/product-detail/ProductInfo"
@@ -11,6 +12,7 @@ export default function ProductDetail(){
         <ProductInfo product={product} />
         <ProductFooter product={product} />
         <FavProducts />
+        <Brands />
       </main>
     );
 }
