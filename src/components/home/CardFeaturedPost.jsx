@@ -1,5 +1,5 @@
 import { ChevronRight, Clock2, MessageSquareText } from "lucide-react";
-import posts from "../posts.js"
+import posts from "../../data/posts.js"
 
 export default function FeaturedPostCard() {
   return (
