@@ -9,7 +9,7 @@ export default function ProductFooter({ product }) {
     <section className="flex flex-col w-[90vw] mx-auto my-20 gap-10 font-[Montserrat] text-[#252B42] lg:w-[1056px]">
       <div className="mx-auto flex justify-center gap-10 items-center md:w-[30vw] ">
         <button
-          className={`text-sm text-[#737373] ${
+          className={`text-sm text-[#737373] cursor-pointer ${
             activeTab === "description"
               ? `font-semibold underline`
               : `font-bold`
@@ -19,7 +19,7 @@ export default function ProductFooter({ product }) {
           Description
         </button>
         <button
-          className={`text-sm text-[#737373] ${
+          className={`text-sm text-[#737373] cursor-pointer ${
             activeTab === "additionalInformation"
               ? `font-semibold underline`
               : `font-bold`
@@ -29,7 +29,7 @@ export default function ProductFooter({ product }) {
           Additional Information
         </button>
         <button
-          className={`text-sm text-[#737373] ${
+          className={`text-sm text-[#737373] cursor-pointer ${
             activeTab === "review" ? `font-semibold underline` : `font-bold`
           }`}
           onClick={() => setActiveTab("review")}

@@ -6,6 +6,8 @@ import ProductDetail from "../pages/ProductDetail";
 import ContactPage from "../pages/ContactPage";
 import AboutPage from "../pages/AboutPage";
 import PricingPage from "../pages/PricingPage";
+import Register from "../pages/Register";
+import Login from "../pages/Login";
 
 export default function PageContent() {
   return (
@@ -13,12 +15,19 @@ export default function PageContent() {
       <Route exact path="/">
         <HomePage />
       </Route>
+      <Route path="/register">
+        <Register />
+      </Route>
+      <Route path="/login">
+        <Login />
+      </Route>
+      <Route path="/shop/:gender/:categoryName/:categoryId/:productNameSlug/:productId">
+        <ProductDetail />
+      </Route>
       <Route path="/shop">
         <ShopPage />
       </Route>
-      <Route path="/product">
-        <ProductDetail />
-      </Route>
+
       <Route path="/contact">
         <ContactPage />
       </Route>

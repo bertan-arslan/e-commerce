@@ -27,7 +27,6 @@ export default function ReviewForm({ productName }) {
       </h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        
         <div className="flex gap-2 items-center">
           <span className="font-medium">Your Rating</span>
           <div className="flex gap-1">
@@ -47,7 +46,6 @@ export default function ReviewForm({ productName }) {
           </div>
         </div>
 
-        
         <textarea
           placeholder="Your Review *"
           className="border p-3 rounded w-full"
@@ -57,7 +55,6 @@ export default function ReviewForm({ productName }) {
           required
         />
 
-      
         <div className="flex flex-col md:flex-row gap-4">
           <input
             type="text"
@@ -77,7 +74,6 @@ export default function ReviewForm({ productName }) {
           />
         </div>
 
-      
         <label className="flex gap-2 items-center">
           <input type="checkbox" />
           <span className="text-sm text-gray-500">
@@ -88,7 +84,7 @@ export default function ReviewForm({ productName }) {
 
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 px-5 rounded hover:bg-blue-600 transition"
+          className="bg-blue-500 text-white py-2 px-5 rounded hover:bg-blue-600 transition cursor-pointer"
         >
           Submit
         </button>

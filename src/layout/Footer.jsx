@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="text-white font-[Montserrat] bg-[#252B42] px-20 pt-20 pb-5 ">
-      <div className="px-5 flex flex-col  gap-10 md:flex-row md:justify-around md:w-full md:m-auto">
+      <div className="max-w-[1050px] px-5 flex flex-col  gap-10 md:flex-row md:justify-around md:w-full md:m-auto">
         <div className="flex flex-col gap-5">
           <h3 className="text-2xl font-bold">Get In Touch</h3>
           <p className="text-sm">the quick fox jumps over the lazy dog</p>
@@ -94,7 +94,7 @@ export default function Footer() {
           </nav>
         </div>
       </div>
-      <p className="pt-30 flex items-center justify-center text-sm font-bold text-center">
+      <p className="max-w-[1050px] mx-auto pt-30 flex items-center justify-center text-sm font-bold text-center">
         Made With Love By <br className="md:hidden" />
         Bertan ARSLAN <br className="md:hidden" />
         For Educational Purposes

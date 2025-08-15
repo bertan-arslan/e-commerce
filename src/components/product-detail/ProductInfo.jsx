@@ -43,13 +43,13 @@ export default function ProductInfo({product}) {
             <hr className="text-[#858585]" />
           </div>
           <div className="flex items-center gap-5 ">
-            <button className="w-[148px] h-[44px] bg-[#23A6F0] rounded-[5px] font-bold text-sm text-white">
+            <button className="w-[148px] h-[44px] bg-[#23A6F0] rounded-[5px] font-bold text-sm text-white cursor-pointer">
               BUY NOW
             </button>
-            <button className="w-10 h-10 rounded-full border border-[#E8E8E8]">
+            <button className="w-10 h-10 rounded-full border border-[#E8E8E8] cursor-pointer">
               <Heart className="mx-auto" />
             </button>
-            <button className="w-10 h-10 rounded-full border border-[#E8E8E8]">
+            <button className="w-10 h-10 rounded-full border border-[#E8E8E8] cursor-pointer">
               <ShoppingCart className="mx-auto" />
             </button>
           </div>
