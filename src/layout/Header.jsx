@@ -13,11 +13,13 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 import { useState } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom"; 
+import { Link, useLocation, useHistory } from "react-router-dom";
 
-import { useSelector, useDispatch } from "react-redux"; 
+import { useSelector, useDispatch } from "react-redux";
 import Gravatar from "react-gravatar";
-import { logoutUser } from "../store/actions/userActions"; 
+import { logoutUser } from "../store/actions/userActions";
+import CartDropdown from "../components/header/CartDropdown";
+import FavoritesDropdown from "../components/header/FavoritesDropdown";
 
 const slugify = (s = "") =>
   s
@@ -67,21 +69,23 @@ const genderMap = {
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
+  const [favOpen, setFavOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const location = useLocation();
-  const history = useHistory(); 
-  const dispatch = useDispatch(); 
+  const history = useHistory();
+  const dispatch = useDispatch();
 
   const user = useSelector((s) => s.user?.user);
   const token =
     useSelector((s) => s.user?.token) || localStorage.getItem("token");
   const isAuthed = Boolean(user || token);
   const emailForAvatar = user?.email || "someone@example.com";
-  const emailToShow = user?.email || ""; 
+  const emailToShow = user?.email || "";
 
   const categories = useSelector((s) => s.category?.items || []);
   const catsWomen = categories.filter((c) => c.gender === "k");
@@ -103,11 +107,15 @@ export default function Header() {
     return { label, slug, genderPath: g.path };
   };
 
-
   const handleLogout = () => {
     dispatch(logoutUser());
     history.push("/");
   };
+
+  const cartCount = useSelector((s) =>
+    (s.cart?.items || []).reduce((sum, it) => sum + it.count, 0)
+  );
+  const favCount = useSelector((s) => (s.favorites?.items || []).length);
 
   return (
     <header className="z-50 relative">
@@ -275,13 +283,12 @@ export default function Header() {
                     default="identicon"
                     className="rounded-full"
                   />
-                  
+
                   <span className="hidden md:flex text-[#23A6F0] font-bold">
                     {emailToShow}
                   </span>
                 </Link>
 
-                
                 <button
                   type="button"
                   onClick={handleLogout}
@@ -321,24 +328,33 @@ export default function Header() {
 
           {/* search */}
           <Search />
-          <Link
-            //to="/profile/cart"
-            to="/maintenance"
-            className="flex gap-1 content-center items-center"
-          >
-            <ShoppingCart />
-            {/* cart */}
-            <p className="hidden md:flex">1</p>
-          </Link>
+          <div className="relative">
+            <button
+              onClick={() => setCartOpen((p) => !p)}
+              className="flex gap-1 content-center items-center cursor-pointer"
+              aria-label="Open cart"
+              title="Cart"
+            >
+              <ShoppingCart />
+
+              <span className="hidden md:flex">{cartCount}</span>
+            </button>
+
+            {cartOpen && <CartDropdown onClose={() => setCartOpen(false)} />}
+          </div>
           <Menu onClick={toggleMenu} className="md:hidden" />
-          <Link
-            //to="/profile/likes"
-            className="hidden md:flex gap-1 content-center items-center"
-          >
-            <Heart />
-            {/* likes */}
-            <p>1</p>
-          </Link>
+          <div className="relative hidden md:flex gap-1 content-center items-center">
+            <button
+              type="button"
+              onClick={() => setFavOpen((p) => !p)}
+              className="flex items-center gap-1 cursor-pointer "
+              title="Favorites"
+            >
+              <Heart />
+              <span>{favCount}</span>
+            </button>
+            {favOpen && <FavoritesDropdown onClose={() => setFavOpen(false)} />}
+          </div>
         </div>
       </div>
       {isOpen && (
@@ -389,7 +405,6 @@ export default function Header() {
             Pricing
           </Link>
 
-          
           {isAuthed && (
             <button
               type="button"

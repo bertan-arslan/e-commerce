@@ -11,14 +11,15 @@ import client from "./reducers/clientReducer";
 import product from "./reducers/productReducer";
 import cart from "./reducers/cartReducer";
 import category from "./reducers/categoryReducer";
-
+import favorites from "./reducers/favoritesReducers";
 
 const rootReducer = combineReducers({
   client,
   product,
   cart,
   user,
-  category
+  category,
+  favorites,
 });
 
 

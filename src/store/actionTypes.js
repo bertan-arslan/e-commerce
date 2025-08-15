@@ -16,7 +16,15 @@ export const PRODUCT_SET_DETAIL = "PRODUCT_SET_DETAIL";
 export const PRODUCT_SET_DETAIL_FETCH_STATE = "PRODUCT_SET_DETAIL_FETCH_STATE";
 
 // SHOPPING CART
-export const CART_SET_CART = "CART/SET_CART";
-export const CART_SET_PAYMENT = "CART/SET_PAYMENT";
-export const CART_SET_ADDRESS = "CART/SET_ADDRESS";
+export const CART_ADD_ITEM = "cart/CART_ADD_ITEM";
+export const CART_REMOVE_ITEM = "cart/CART_REMOVE_ITEM";
+export const CART_DECREASE_ITEM = "cart/CART_DECREASE_ITEM";
+export const CART_TOGGLE_CHECKED = "cart/CART_TOGGLE_CHECKED";
+export const CART_CLEAR = "cart/CART_CLEAR";
+
+//FAV PRODUCT
+export const FAV_ADD = "fav/FAV_ADD";
+export const FAV_REMOVE = "fav/FAV_REMOVE";
+export const FAV_TOGGLE = "fav/FAV_TOGGLE";
+export const FAV_CLEAR = "fav/FAV_CLEAR";
 

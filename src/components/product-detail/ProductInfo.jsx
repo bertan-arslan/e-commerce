@@ -1,8 +1,24 @@
-import { Heart, ShoppingCart, Star } from "lucide-react";
+import { Heart, HeartOff, ShoppingCart, Star } from "lucide-react";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../store/actions/cartActions";
+import { toggleFavorite } from "../../store/actions/favActions";
 
-
-export default function ProductInfo({product}) {
+export default function ProductInfo({ product }) {
   const rating = Math.round(product.rating);
+  const dispatch = useDispatch();
+  const isFav = useSelector((s) =>
+    (s.favorites?.items || []).some((x) => x.id === product?.id)
+  );
+
+  const handleAdd = () => {
+    if (!product) return;
+    dispatch(addToCart(product));
+  };
+
+  const handleFav = () => {
+    if (!product) return;
+    dispatch(toggleFavorite(product));
+  };
 
   return (
     <section className="flex flex-col w-[90vw] mx-auto my-20 gap-10 font-[Montserrat] text-[#252B42] md:flex-row md:w-[70vw] lg:w-[1049px]">
@@ -43,13 +59,23 @@ export default function ProductInfo({product}) {
             <hr className="text-[#858585]" />
           </div>
           <div className="flex items-center gap-5 ">
-            <button className="w-[148px] h-[44px] bg-[#23A6F0] rounded-[5px] font-bold text-sm text-white cursor-pointer">
+            <button className="w-[148px] h-[44px] bg-[#23A6F0] rounded-[5px] font-bold text-sm text-white cursor-pointer hover:shadow transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
               BUY NOW
             </button>
-            <button className="w-10 h-10 rounded-full border border-[#E8E8E8] cursor-pointer">
-              <Heart className="mx-auto" />
+            <button
+              onClick={handleFav}
+              className="w-10 h-10 rounded-full border transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer border-[#E6E6E6] text-[#252B42] hover:border-[#23A6F0] hover:text-[#23A6F0] "
+            >
+              {isFav ? (
+                <HeartOff className="mx-auto" />
+              ) : (
+                <Heart className="mx-auto" />
+              )}
             </button>
-            <button className="w-10 h-10 rounded-full border border-[#E8E8E8] cursor-pointer">
+            <button
+              onClick={handleAdd}
+              className="w-10 h-10 rounded-full border border-[#E8E8E8] cursor-pointer hover:border-[#23A6F0] hover:text-[#23A6F0] transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
+            >
               <ShoppingCart className="mx-auto" />
             </button>
           </div>
