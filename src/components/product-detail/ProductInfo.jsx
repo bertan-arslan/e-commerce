@@ -2,10 +2,12 @@ import { Heart, HeartOff, ShoppingCart, Star } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../store/actions/cartActions";
 import { toggleFavorite } from "../../store/actions/favActions";
+import { useHistory } from "react-router-dom";
 
 export default function ProductInfo({ product }) {
   const rating = Math.round(product.rating);
   const dispatch = useDispatch();
+  const history = useHistory();
   const isFav = useSelector((s) =>
     (s.favorites?.items || []).some((x) => x.id === product?.id)
   );
@@ -14,6 +16,12 @@ export default function ProductInfo({ product }) {
     if (!product) return;
     dispatch(addToCart(product));
   };
+
+    const handleBuy = () => {
+      if (!product) return;
+      dispatch(addToCart(product));
+      history.push("/cart")
+    };
 
   const handleFav = () => {
     if (!product) return;
@@ -59,7 +67,10 @@ export default function ProductInfo({ product }) {
             <hr className="text-[#858585]" />
           </div>
           <div className="flex items-center gap-5 ">
-            <button className="w-[148px] h-[44px] bg-[#23A6F0] rounded-[5px] font-bold text-sm text-white cursor-pointer hover:shadow transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            <button
+              onClick={handleBuy}
+              className="w-[148px] h-[44px] bg-[#23A6F0] rounded-[5px] font-bold text-sm text-white cursor-pointer hover:shadow transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
+            >
               BUY NOW
             </button>
             <button

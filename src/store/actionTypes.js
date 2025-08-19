@@ -28,3 +28,8 @@ export const FAV_REMOVE = "fav/FAV_REMOVE";
 export const FAV_TOGGLE = "fav/FAV_TOGGLE";
 export const FAV_CLEAR = "fav/FAV_CLEAR";
 
+//ADDRESS
+export const ADDRESS_SET_LIST = "address/ADDRESS_SET_LIST";
+export const ADDRESS_SET_FETCH_STATE = "address/ADDRESS_SET_FETCH_STATE";
+export const ADDRESS_SELECT_SHIPPING = "address/ADDRESS_SELECT_SHIPPING";
+export const ADDRESS_SELECT_BILLING = "address/ADDRESS_SELECT_BILLING";

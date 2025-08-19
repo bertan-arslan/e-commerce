@@ -64,9 +64,9 @@ export default function CartDropdown({ onClose }) {
 
       <div className="mt-3 flex justify-between items-center">
         <span className="font-bold">${totalPrice.toFixed(2)}</span>
-        <div className="flex gap-2">
+        <div className="flex gap-2 items-center">
           <Link
-            to="/maintenance"
+            to="/cart"
             className="text-[#23A6F0] font-bold"
             onClick={onClose}
           >

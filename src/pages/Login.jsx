@@ -1,10 +1,8 @@
-
 import { useForm } from "react-hook-form";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import CircularProgress from "@mui/material/CircularProgress";
 import { toast } from "react-toastify";
-
 
 import { loginUser } from "../store/actions/userActions";
 
@@ -12,7 +10,6 @@ export default function Login() {
   const history = useHistory();
   const location = useLocation();
   const dispatch = useDispatch();
-
 
   const status = useSelector((s) => s.user?.status) || "idle";
 
@@ -30,13 +27,12 @@ export default function Login() {
 
     return dispatch(loginUser({ email, password, rememberMe: remember }))
       .then(() => {
-       
-        const from = location.state && location.state.from;
+        const from = location.state?.from?.pathname || "/";
         if (from) {
           history.replace(from);
           return;
         }
-        
+
         if (history.length > 1) history.goBack();
         else history.push("/");
       })
@@ -44,6 +40,8 @@ export default function Login() {
         toast.error(msg || "Login failed");
       });
   };
+
+  
 
   return (
     <main className="w-[90vw] md:w-[50vw] mx-auto my-20 flex flex-col gap-5 font-[Montserrat] text-[#252B42]">

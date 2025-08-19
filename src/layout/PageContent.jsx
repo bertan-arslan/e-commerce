@@ -8,6 +8,9 @@ import AboutPage from "../pages/AboutPage";
 import PricingPage from "../pages/PricingPage";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import CartPage from "../pages/CartPage";
+import CheckoutAddressPage from "../pages/CheckoutAddressPage";
+import ProtectedRoute from "./ProtectedRoute";
 
 export default function PageContent() {
   return (
@@ -27,7 +30,12 @@ export default function PageContent() {
       <Route path="/shop">
         <ShopPage />
       </Route>
-
+      <Route path="/cart">
+        <CartPage />
+      </Route>
+      <ProtectedRoute path="/checkout">
+         <CheckoutAddressPage />
+      </ProtectedRoute>
       <Route path="/contact">
         <ContactPage />
       </Route>
