@@ -11,6 +11,10 @@ import Login from "../pages/Login";
 import CartPage from "../pages/CartPage";
 import CheckoutAddressPage from "../pages/CheckoutAddressPage";
 import ProtectedRoute from "./ProtectedRoute";
+import AddAddressPage from "../pages/AddAddressPage";
+import CheckoutPaymentPage from "../pages/CheckoutPaymentPage";
+import OrdersPage from "../pages/OrdersPage";
+import ProfilePage from "../pages/ProfilePage";
 
 export default function PageContent() {
   return (
@@ -33,8 +37,20 @@ export default function PageContent() {
       <Route path="/cart">
         <CartPage />
       </Route>
+      <ProtectedRoute path="/orders">
+        <OrdersPage />
+      </ProtectedRoute>
+      <ProtectedRoute path="/checkout/address/new">
+        <AddAddressPage />
+      </ProtectedRoute>
+      <ProtectedRoute path="/checkout/payment">
+        <CheckoutPaymentPage />
+      </ProtectedRoute>
       <ProtectedRoute path="/checkout">
-         <CheckoutAddressPage />
+        <CheckoutAddressPage />
+      </ProtectedRoute>
+      <ProtectedRoute path="/profile">
+        <ProfilePage />
       </ProtectedRoute>
       <Route path="/contact">
         <ContactPage />
