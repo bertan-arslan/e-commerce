@@ -57,21 +57,21 @@ export default function ProductDetail() {
   }
 
   return (
-    <main className="w-[90vw] max-w-[1200px] mx-auto py-10">
-     
-      <button
-        onClick={safeBack}
-        className="mb-6 text-[#23A6F0] font-bold hover:underline cursor-pointer"
-      >
-        ← Back
-      </button>
+    <main>
+      <div className="w-[90vw] max-w-[1200px] mx-auto py-10">
+        <button
+          onClick={safeBack}
+          className="mb-6 text-[#23A6F0] font-bold hover:underline cursor-pointer"
+        >
+          ← Back
+        </button>
 
-     
-      <ProductInfo product={product} />
+        <ProductInfo product={product} />
 
-      <ProductFooter product={product} />
-      <FavProducts />
-      <Brands />
+        <ProductFooter product={product} />
+        <FavProducts />
+      </div>
+      <Brands className="w-screen" />
     </main>
   );
 }
